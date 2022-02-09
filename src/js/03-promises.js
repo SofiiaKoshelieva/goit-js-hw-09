@@ -8,11 +8,11 @@ formEl.addEventListener('submit', onFormSubmit)
 
 function onFormSubmit(e) {
   e.preventDefault();
-  const delay = +inputDelayEl.value; // перваяотсрочка вызова ф-ции
-  const step = +inputStepEl.value; // шаг изменения отсрочки
+  const delay = +inputDelayEl.value; 
+  const step = +inputStepEl.value; 
   const amount = +inputAmountEl.value
   for (let i = 0; i < amount; i += 1) {
-    const currentPosition = i + 1; // текущая позиция промиса (номер промиса)
+    const currentPosition = i + 1; 
     const currentDelay = delay + i * step;
      createPromise(currentPosition, currentDelay)
       .then(({ position, delay }) => {
